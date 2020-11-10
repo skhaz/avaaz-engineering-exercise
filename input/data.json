@@ -27,7 +27,7 @@
     },
     {
       "title": "Function-based mission-critical software",
-      "uri": "http://phillips.info/main/",
+      "uri": "file:///phillips.info/main/",
       "date": "21 Aug 2015"
     },
     {
@@ -272,7 +272,7 @@
     },
     {
       "title": "Le confort d'\u00e9voluer \u00e0 sa source",
-      "uri": "https://www.barbosa.br/privacy.html",
+      "uri": "//www.barbosa.br/privacy.html",
       "date": "29 Oct 1989"
     },
     {
@@ -458,7 +458,7 @@
     {
       "title": "Innovative uniform algorithm",
       "uri": "https://www.roux.com/homepage/",
-      "date": "May 23 2002"
+      "date": "May 23"
     },
     {
       "title": "A arte de avan\u00e7ar com toda a tranquilidade",
@@ -487,7 +487,7 @@
     },
     {
       "title": "La libert\u00e9 de rouler plus facilement",
-      "uri": "https://www.martins.fr/main/posts/author/",
+      "uri": "/main/posts/author/",
       "date": "August 15 1984"
     },
     {
