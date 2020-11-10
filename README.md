@@ -6,25 +6,25 @@ Thanks for your interest in joining Avaaz! We're thrilled that you'd consider wo
 
 Your task is to build a solution that allows a user to search data using several filters:
 
--   Date range
--   Title
--   URL
+- Date range
+- Title
+- URL
 
 Using the language and tools of your choice, create a solution that:
 
--   Ingests JSON source metadata (see the `input` folder)
--   Stores normalized data
--   Queries the data (using the filters described above)
--   Outputs the results
+- Ingests JSON source data (see the `input` folder)
+- Stores normalized data
+- Queries the data (using the filters described above)
+- Outputs the results
 
 ## Evaluation criteria
 
 When reviewing your solution, we will test to see if it:
 
--   Can be run by our engineers using a Docker container
--   Solves the challenges laid out in the instructions
--   Normalizes the source metadata, accounting for any variations
--   Validates user inputs, accounting for security and accuracy
+- Can be run by our engineers using a Docker container
+- Solves the challenges laid out in the instructions
+- Normalizes the source data, accounting for any variations
+- Validates user inputs, accounting for security and accuracy
 
 ### Submitting
 

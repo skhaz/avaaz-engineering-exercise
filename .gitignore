@@ -1,0 +1,3 @@
+.venv
+generate_data.py
+Pipfile*
