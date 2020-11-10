@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  app:
+    build:
+      context: "./app"
+    env_file: .env
+    volumes:
+      - ./app/:/usr/app/
+    depends_on:
+      - database
+    ports:
+      - "5000:5000"
+  database:
+    image: mysql:5.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: v25xhycLlRY3sV7Z
+      MYSQL_DATABASE: "exercise"
+    volumes:
+      - ./database/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"

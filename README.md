@@ -6,25 +6,31 @@ Thanks for your interest in joining Avaaz! We're thrilled that you'd consider wo
 
 Your task is to build a solution that allows a user to search data using several filters:
 
-- Date range
-- Title
-- URL
+- Date range (after, before, and between)
+- Title (text search, case-insensitive, full or partial matches)
+- URL (full or partial matches)
 
-Using the language and tools of your choice, create a solution that:
+Using Flask, create a solution that:
 
 - Ingests JSON source data (see the `input` folder)
-- Stores normalized data
+- Stores valid data and normalized datetimes in the provided database
 - Queries the data (using the filters described above)
 - Outputs the results
+
+Note that we've provided the following:
+
+- The destination database table (see `database/initdb.d/setup.sql`)
+- A bare bones Flask app (see `app/server.py`)
 
 ## Evaluation criteria
 
 When reviewing your solution, we will test to see if it:
 
-- Can be run by our engineers using a Docker container
+- Can be run by our engineers using Docker
 - Solves the challenges laid out in the instructions
-- Normalizes the source data, accounting for any variations
+- Normalizes the source data, accounting for any variations or bad data
 - Validates user inputs, accounting for security and accuracy
+- Contains an updated README with instructions for using the solution
 
 ### Submitting
 
