@@ -1,6 +1,6 @@
 # Avaaz Engineering Exercise
 
-Thanks for your interest in joining Avaaz! We're thrilled that you'd consider working with us. The next step in your interview process is to complete this exercise. The exercise should take no more than an hour to complete.
+Thanks for your interest in joining Avaaz! We're thrilled that you'd consider working with us. The next step in your interview process is to complete this exercise. You should spend approximately one hour on this - don't worry if you don't complete every requirement.
 
 ## Instructions
 
@@ -14,8 +14,7 @@ Using Flask, create a solution that:
 
 - Ingests JSON source data (see the `input` folder)
 - Stores valid data and normalized datetimes in the provided database
-- Queries the data (using the filters described above)
-- Outputs the results
+- Allows searching the data through an API endpoint (using the filters described above)
 
 Note that we've provided the following:
 
@@ -34,4 +33,4 @@ When reviewing your solution, we will test to see if it:
 
 ### Submitting
 
-Fork this repo and submit a pull request with your solution.
+To submit your solution, either create a pull request or send a zipped file via email to your Avaaz recruiting contact (you can reply to your existing email thread).
