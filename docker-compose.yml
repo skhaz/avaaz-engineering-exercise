@@ -4,20 +4,48 @@ services:
   app:
     build:
       context: "./app"
-    env_file: .env
+      args:
+        options: --reload
     volumes:
-      - ./app/:/usr/app/
+      - ./app/:/app/
     depends_on:
-      - database
+      cache:
+        condition: service_healthy
+      database:
+        condition: service_healthy
     ports:
-      - "5000:5000"
+      - "8000:8000"
+    environment:
+      DATABASE_URI: "mysql+mysqlconnector://root:password@database:3306/exercise"
+      CACHE_URI: "redis://cache:6379"
+  cache:
+    image: redis:7
+    tmpfs:
+      - /data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 1s
+      timeout: 5s
+      start_period: 5s
+      retries: 3
   database:
-    image: mysql:5.6
+    image: mysql:8.2
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: v25xhycLlRY3sV7Z
-      MYSQL_DATABASE: "exercise"
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: exercise
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "exit | mysql -h localhost -P 3306 -u root -p$$MYSQL_ROOT_PASSWORD",
+        ]
+      interval: 1s
+      timeout: 10s
+      retries: 30
     volumes:
       - ./database/initdb.d:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
+    tmpfs:
+      - /var/lib/mysql
