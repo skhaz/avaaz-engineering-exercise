@@ -132,4 +132,14 @@ curl "http://localhost:8000/v1/1"
 
 ## Tests
 
-I wrote a minimal set of unit tests. I would write more tests if have more time.
+Run tests with coverage report:
+
+```bash
+PYTHONPATH=. pytest --cov-report html --cov=app
+```
+
+Open coverage report:
+
+```bash
+open htmlcov/index.html
+```

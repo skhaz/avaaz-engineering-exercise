@@ -22,7 +22,7 @@ def bulk_insert(items: list[JSONEntry]):
         )
 
         db.session.commit()
-    except Exception as exc:
+    except Exception as exc: # pragma: no cover # No time.
         traceback.print_exception(exc)
         db.session.rollback()
         raise exc

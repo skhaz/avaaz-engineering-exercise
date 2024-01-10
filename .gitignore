@@ -3,4 +3,7 @@
 .ruff_cache/
 __pycache__/
 venv/
+htmlcov/
+
 generate_data.py
+.coverage

@@ -13,8 +13,20 @@ def client():
     yield client
 
 
-def test_get_by_id_404_not_found(client):
-    response = client.get("/v1/avaaz/404")
+def test_get_by_id_404_not_found(mocker, client):
+    def mock_get_redis():
+        class MockRedis:
+            def get(self, key):
+                return None
+
+            def setex(self, key, ttl, value):
+                pass
+
+        return MockRedis()
+
+    mocker.patch("app.cache.redis.get_redis", side_effect=mock_get_redis)
+
+    response = client.get("/v1/404")
     assert response.status_code == 404
 
 

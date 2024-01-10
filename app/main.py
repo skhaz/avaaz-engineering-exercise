@@ -7,9 +7,7 @@ from models.base import db
 
 def create_app() -> Flask:
     app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
-        "DATABASE_URI", "sqlite:///:memory:"
-    )
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URI", "sqlite:///:memory:")  # fmt: skip
     app.register_blueprint(avaaz_blueprint_v1, url_prefix="/v1")
 
     db.init_app(app)
