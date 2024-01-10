@@ -13,7 +13,7 @@ _redis_pool = None
 ONE_MONTH = 60 * 60 * 24 * 30  # may be more, may be less, it must have a way to flush.
 
 
-def get_redis() -> Redis: # pragma: no cover
+def get_redis() -> Redis:  # pragma: no cover
     global _redis_pool
     if _redis_pool is None:
         _redis_pool = ConnectionPool.from_url(os.environ["CACHE_URI"])
