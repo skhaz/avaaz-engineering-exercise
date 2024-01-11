@@ -78,8 +78,6 @@ There are several things that could be improved, like using Flask Config for con
 
 ## Question 2
 
-Consider the following scenario; You were assigned to design and build an application that will act as an API gateway and be used with multiple services that are running on AWS and behind Cloudflare. Please explain how you would approach architecting and rolling out such a system. How would you design the authentication and authorization flows knowing that the gateway will receive requests from users and also handle cross-service communications? What other, if any, security considerations will you take into account?
-
 ### Amazon AWS Architecture
 
 In an architecture based on AWS services and using Cloudflare, we can firstly enforce the use of HTTPS and enable HSTS for maximum security on Cloudflare. Additionally, we can enable WAF, anti-DDoS protection, bot protection, and possibly Page Shield.
