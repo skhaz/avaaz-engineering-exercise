@@ -68,9 +68,13 @@ I created indexes on almost all fields. This could be bad as it might increase t
 
 I used Clean Architecture and Clean Code moderately. I particularly like the approach of using use cases to keep controllers lean.
 
-Due to lack of time, I only wrote tests for the endpoints, but they cover 99-100%. Normally at work, I write tests 1:1; for every file, there's a test file covering all statements.
+Due to lack of time, I only wrote tests for the endpoints, but they cover 100%. Normally at work, I write tests 1:1; for every file, there's a test file covering all statements.
 
 There are several things that could be improved, like using Flask Config for configurations.
+
+### Tests Coverage
+
+![Tests coverage](./coverage.png)
 
 ## Question 2
 

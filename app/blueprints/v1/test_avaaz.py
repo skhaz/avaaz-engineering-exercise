@@ -99,8 +99,7 @@ def test_bulk_200(client):
 
 
 def test_bulk_500(mocker, client):
-    # Not sure why the exception is not being raised.
-    mocker.patch("app.blueprints.v1.avaaz.bulk_insert", side_effect=Exception("bad"))
+    mocker.patch("blueprints.v1.avaaz.bulk_insert", side_effect=Exception())
 
     response = client.post(
         "/v1/bulk",
